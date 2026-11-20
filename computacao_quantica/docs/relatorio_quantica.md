@@ -1,0 +1,71 @@
+# Sentinela do Território: computação quântica aplicada à alocação de equipes
+
+Global Solution CitizenTech. Disciplina: Computação Quântica & IA.
+
+**Integrantes:** GEANDRO (RM 562316) · LUCAS VERO (RM 564202) · ROBERTO EDUARDO (RM 564537)
+
+# 1. Objetivo
+
+Avaliar como a computação quântica ampliaria o Sentinela do Território: identificar um gargalo real do protótipo, escolher a capacidade quântica que atacaria esse gargalo, construir um roadmap realista (o que a IA clássica entrega hoje, o que o quântico agregaria no futuro, o benefício esperado) e analisar ética, LGPD e ODS ao longo desse roadmap. Esta disciplina não pede implementação: é uma análise, apoiada no que o grupo já construiu nas outras frentes do projeto (RPA, Cluster Computing) e em fontes reais sobre o estado atual da computação quântica.
+
+# 2. O gargalo real identificado
+
+O Sentinela do Território já tem um módulo de **triagem automática de relatos** (disciplina de RPA, `rpa/regras.py`): cada relato recebido (formulário OCR + classificação de imagem de satélite + contexto do boletim do INPE) recebe uma prioridade, ALTA, MÉDIA, BAIXA ou REVISAR, somando sinais de risco encontrados. Essa regra funciona bem para **decidir a prioridade de um relato isolado**, e é exatamente o tipo de tarefa que a IA clássica já resolve de forma barata e rápida.
+
+O que a regra atual **não faz**, e nenhuma parte do protótipo faz hoje, é decidir, quando **muitos relatos de prioridade ALTA chegam ao mesmo tempo**, qual equipe de campo (Corpo de Bombeiros, Defesa Civil) deve atender qual ocorrência, em que ordem e por qual rota, dado um número limitado de equipes, veículos e tempo. Isso é um problema de **alocação de recursos com restrições** (quantas equipes existem, onde cada uma está, quanto tempo leva até cada ocorrência, qual prioridade pesa mais), da mesma família do clássico *Vehicle Routing Problem* (VRP), que cresce de forma combinatória com o número de ocorrências e de equipes.
+
+Esse é precisamente o cenário de pico que o grupo já modelou na disciplina de Cluster Computing (`cluster_computing/docs/relatorio_cluster.pdf`): uma "rajada" de alertas simultâneos durante uma onda de queimadas. Lá, o gargalo encontrado foi de **throughput**, o cluster processa os áudios mais rápido com mais workers, mas a comunicação não escala junto, e o ganho murcha. Aqui, o gargalo é outro, e complementar: mesmo que o processamento dos relatos seja instantâneo, **decidir a melhor alocação de equipes entre dezenas ou centenas de ocorrências simultâneas é um problema que fica exponencialmente mais caro para a IA clássica resolver de forma ótima** à medida que o número de ocorrências cresce. Hoje, com poucos relatos por vez, isso nem chega a ser um problema, um gestor humano decide na mão, ou uma regra gulosa simples (atender primeiro quem tem prioridade mais alta, pela ordem de chegada) já resolve bem o suficiente. O gargalo aparece se o Sentinela do Território crescer para atender uma região inteira, com muitas equipes e muitas ocorrências ao mesmo tempo, justamente o cenário que o projeto tenta antecipar.
+
+Resumindo o gargalo na definição do enunciado: a IA clássica, aqui, não é insegura nem imprecisa, ela fica **lenta e cara para achar a alocação ótima** (não uma qualquer, a melhor possível) quando o número de ocorrências e equipes cresce, porque o espaço de combinações possíveis cresce fatorialmente.
+
+# 3. Capacidade quântica escolhida: otimização combinatória
+
+A capacidade que ataca esse gargalo é a **otimização**, especificamente, otimização combinatória com restrições, o tipo de problema que a computação quântica ataca hoje por duas vias principais:
+
+- **Recozimento quântico (quantum annealing)**: hardware especializado (como o da D-Wave) que busca o mínimo de uma função de custo codificada como um problema de otimização (QUBO/Ising). É a via mais madura comercialmente para este tipo de problema.
+- **QAOA (Quantum Approximate Optimization Algorithm)**: um algoritmo híbrido clássico-quântico, rodado em computadores quânticos de portas lógicas (como os da IBM ou IonQ), ainda mais limitado em escala hoje.
+
+Essa escolha também se conecta com o eixo de PQC (criptografia pós-quântica) citado no enunciado: qualquer um dos dois caminhos de otimização quântica, hoje, só está disponível como **serviço de nuvem** de terceiros (D-Wave Leap, IBM Quantum, IonQ), nenhum provedor opera localmente. Isso significa que dados de localização das ocorrências e das equipes precisariam trafegar até esses serviços, o que traz de volta, por outra porta, a mesma preocupação de proteção de dados que motiva a PQC (seção 6).
+
+# 4. Estado atual da computação quântica para este tipo de problema
+
+Para não prometer mais do que a tecnologia sustenta, o grupo levantou o estado real (não especulado) da otimização quântica aplicada a roteirização e escalonamento, a família de problema mais próxima da alocação de equipes do Sentinela do Território:
+
+- **D-Wave e Pattison Food Group**: escalonamento de entregadores em produção desde o fim de 2022, segundo o fornecedor, o exemplo mais maduro de uso real, ainda assim em um domínio mais simples que uma frota de emergência com restrições de tempo crítico.
+- **IonQ e Einride** (2026): um algoritmo quântico (QAOA, em íons aprisionados) usado como "largada quente" para o solver clássico de roteirização de frete já em operação. Em média, o resultado ficou 1,7% pior que o solver clássico puro; no melhor cenário testado, 12,1% melhor. A resposta só do quântico, sozinha, entregou 5,1% menos capacidade de entrega que o clássico.
+- **Telefónica e Würth España** (2026): piloto de otimização de embalagem combinando quântico e IA clássica, com 14% de ganho de eficiência reportado sobre mais de 6.000 pedidos, hardware e linha de base não divulgados publicamente.
+- **Volkswagen/LMU, Unisys, Fraunhofer CML**: benchmarks publicados que, segundo a literatura revisada, **não mostraram vantagem clara** do quântico sobre solvers clássicos bem ajustados.
+
+Fontes: [The Quantum Insider, Logistics](https://thequantuminsider.com/guides/quantum-computing-use-cases/logistics/), [IonQ, Mind the Gaps](https://ionq.com/blog/mind-the-gaps-quantum-optimization-for-efficient-electric-and-autonomous-freight-dispatch-with-ionq-and-einride), [Unisys 2026, quantum annealing e VRP](https://www.pulse.bot/quantum/news/unisys-2026-study-quantum-annealing-tackles-complex-vehicle-routing-problems-80c267b2-dd30-4f4b-808d-950e032b2ed6/).
+
+O retrato é consistente: pilotos reais existem, mas nenhum demonstrou ainda uma vantagem quântica clara e repetível sobre a IA clássica otimizada para este tipo de problema. É esse retrato, não uma promessa de "computador quântico resolve tudo", que baseia o roadmap da seção 5.
+
+# 5. Roadmap: IA clássica hoje → quântico no futuro → benefício esperado
+
+| Horizonte | O que a IA clássica entrega | O que o quântico agregaria | Benefício esperado para o público afetado |
+| --- | --- | --- | --- |
+| **Hoje** (o que o Sentinela do Território já tem) | Triagem de relato por regra simples (`rpa/regras.py`): prioridade ALTA/MÉDIA/BAIXA por relato isolado, fila em planilha, decisão final sempre humana. Resolve bem o volume atual (dezenas de relatos). | não se aplica | Resposta já mais rápida que a triagem manual, mas sem otimizar a alocação quando há disputa por recursos escassos (poucas equipes, muitas ocorrências). |
+| **Curto prazo (1–3 anos)** | Um solver clássico de otimização combinatória (ex.: OR-Tools, usado por empresas de logística) resolveria a alocação de equipes de forma aproximada e já traria ganho real sobre a regra atual, sem precisar de quântico. | Pilotos híbridos (como o da IonQ/Einride) poderiam ser testados como "largada quente" para o mesmo solver clássico, contribuição marginal, inconsistente (a própria IonQ relatou pior desempenho médio, melhor em alguns casos). | Nenhum ganho garantido ainda vindo do quântico; o ganho real neste horizonte vem do solver clássico, que o grupo recomenda como próximo passo concreto, independente de quântico. |
+| **Médio prazo (3–8 anos)** | Solvers clássicos continuam melhorando; a maior parte da indústria de logística segue usando-os. | Hardware de recozimento quântico com mais qubits e menos ruído pode passar a superar o clássico em instâncias específicas, maiores e com mais restrições, ainda não hoje, segundo os benchmarks de 2024–2026. | Se a vantagem se confirmar, alocação mais próxima da ótima em cenários de pico (muitas ocorrências simultâneas, como uma grande frente de queimada), menos tempo até a equipe certa chegar ao lugar certo. |
+| **Longo prazo (8+ anos)** | não se aplica | Computação quântica tolerante a falhas (ainda não existe), com vantagem comprovada e estável para otimização combinatória em grande escala. | Alocação de recursos em tempo real para toda uma região, em cenários de múltiplos desastres simultâneos, benefício real, mas que depende de um avanço de hardware que a literatura atual não data com confiança. |
+
+O ponto central do roadmap: **o ganho imediato e concreto vem da otimização clássica, não do quântico.** O quântico é tratado aqui como uma capacidade a observar e eventualmente adotar quando (e se) a vantagem for demonstrada para este tipo de problema, não como uma dependência do roadmap de curto prazo do Sentinela do Território.
+
+# 6. Ética, LGPD e ODS ao longo do roadmap
+
+**Ética.** Em todos os horizontes, a decisão de alocação, clássica ou quântica, é uma **sugestão de ordenação**, nunca uma decisão automática: a confirmação humana antes de qualquer ação, já um princípio seguido pelo classificador de imagem e pelo RPA do projeto, se mantém. Um algoritmo de otimização otimiza a função de custo que alguém escolheu (por exemplo, "menor tempo total"); cabe ao gestor humano verificar se essa função não está, sem querer, deixando sempre a mesma região ou grupo em desvantagem (por exemplo, áreas mais distantes das bases das equipes). Isso vale igual para o solver clássico de curto prazo e para qualquer solução quântica futura, o risco não é do "quântico", é de qualquer otimização automática aplicada a emergências reais.
+
+**LGPD.** A alocação de equipes depende de dados de localização dos relatos e das equipes, dado pessoal quando combinado com outras informações do relato (o mesmo princípio de minimização e mascaramento já aplicado aos dados pessoais no módulo de Generative AI, `corpus/limpeza.py`, se estenderia aqui). Um ponto específico do roadmap quântico: hoje, nenhum provedor de computação quântica opera no Brasil; D-Wave, IBM Quantum e IonQ são serviços de nuvem estrangeiros. Enviar dados de localização de ocorrências para otimizar nesses serviços é uma **transferência internacional de dados**, que a LGPD (art. 33) exige que seja feita só com salvaguardas adequadas (consentimento, cláusulas contratuais, ou um país com proteção equivalente). O roadmap de médio/longo prazo precisaria, portanto, ou de anonimização mais forte antes do envio (ex.: só distâncias/tempos relativos, sem endereço), ou de um provedor de nuvem quântica com operação ou contrato que atenda à LGPD; isso é uma condição para adotar o quântico, não um detalhe secundário.
+
+**ODS.** O gargalo e a solução proposta se conectam a: **ODS 11** (Cidades e Comunidades Sustentáveis, resposta mais rápida e bem distribuída a desastres urbanos e rurais), **ODS 13** (Ação Contra a Mudança Global do Clima, queimadas como evento climático extremo), **ODS 15** (Vida Terrestre, proteção de áreas de vegetação) e **ODS 9** (Indústria, Inovação e Infraestrutura, adoção responsável de tecnologia emergente). Um risco a vigiar ao longo do roadmap: se a infraestrutura de computação quântica (hoje toda concentrada em poucos países e empresas) só estiver disponível a quem pode pagar por ela, o benefício do "quântico no futuro" pode não chegar às regiões mais pobres e mais afetadas por queimadas, o que contraria o **ODS 10** (Redução das Desigualdades), já citado como eixo do assistente de voz do projeto (PLN). Por isso, o grupo recomenda que o ganho de curto prazo (solver clássico, gratuito ou de baixo custo) seja o que de fato chega ao cidadão, e que o quântico só seja adotado se continuar acessível ao tipo de operação pública que o Sentinela do Território atende.
+
+# 7. Limitações declaradas
+
+- Nenhum teste quântico real foi feito neste projeto: esta é uma análise de viabilidade e roadmap, como pede o enunciado, não uma implementação.
+- Os números citados na seção 4 vêm de pilotos de outras empresas, em problemas parecidos mas não idênticos ao do Sentinela do Território (frota de entrega, não resposta a emergências); os resultados não devem ser extrapolados diretamente.
+- O prazo do roadmap (curto/médio/longo) é uma estimativa qualitativa do grupo a partir do estado atual da literatura (2024–2026), não uma previsão com data garantida, a própria área ainda não tem consenso sobre quando (ou se) a vantagem quântica se confirma para este tipo de problema.
+- O gargalo descrito (alocação de equipes em picos de ocorrências) ainda não existe na prática no protótipo atual, que opera em escala pequena; é um gargalo projetado para quando a solução crescer, não um problema medido hoje.
+
+# 8. Conclusão
+
+O gargalo real do Sentinela do Território que mais se beneficiaria de computação quântica não é o que já foi resolvido (triagem de um relato isolado, pela regra do RPA), e nem o gargalo de comunicação já encontrado na simulação de cluster, é a **alocação de equipes e rotas quando muitas ocorrências de alta prioridade chegam ao mesmo tempo**, um problema de otimização combinatória que cresce mais rápido do que a IA clássica consegue resolver de forma ótima à medida que o sistema atende mais gente. A capacidade quântica correspondente, otimização via recozimento quântico ou QAOA, já tem pilotos reais em problemas parecidos (roteirização, escalonamento), mas nenhum com vantagem comprovada sobre o clássico ainda. O roadmap do grupo recomenda, por isso, investir primeiro num solver clássico de otimização (ganho real e disponível hoje) e tratar o quântico como uma capacidade a monitorar, adotável no futuro se a vantagem se confirmar, com a condição de que o acesso (custo, LGPD, e disponibilidade regional) não deixe esse benefício fora do alcance de quem o Sentinela do Território foi feito para atender.

@@ -1,0 +1,48 @@
+# Sentinela do Território, Global Solution CitizenTech
+# GEANDRO (RM 562316) | LUCAS VERO (RM 564202) | ROBERTO EDUARDO (RM 564537)
+#
+# Sobe o back-end (FastAPI) e o front-end (Gradio) juntos:
+#   cd frontend_ia
+#   docker compose up --build
+# Front-end: http://localhost:7860  |  Back-end: http://localhost:8000/docs
+#
+# O Ollama (LLM) e o modelo de visão treinado continuam rodando na máquina
+# do usuário (fora do Docker), igual ao resto do projeto, veja o README.
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: frontend_ia/backend/Dockerfile
+    env_file:
+      - backend/.env
+    environment:
+      BACKEND_CORS_ORIGINS: http://localhost:7860,http://frontend:7860
+      # O Ollama roda no host, não no container: host.docker.internal aponta
+      # para a máquina onde o Docker está instalado (funciona no Docker
+      # Desktop do Windows/Mac; no Linux, pode ser necessário usar o IP da
+      # máquina ou "--add-host=host.docker.internal:host-gateway").
+      OLLAMA_HOST: http://host.docker.internal:11434
+    ports:
+      - "8000:8000"
+    volumes:
+      # Índice do RAG e logs do projeto, gerados fora do Docker (o código do
+      # PLN fica direto na raiz do projeto, sem uma pasta pln/ própria)
+      - ../genai/indice:/app/genai/indice:ro
+      - ../logs:/app/logs
+      # Modelo de visão treinado no notebook (arquivo .keras do usuário)
+      - ../visao/modelos:/app/visao/modelos:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    env_file:
+      - frontend/.env
+    environment:
+      API_BASE_URL: http://backend:8000
+    ports:
+      - "7860:7860"
+    depends_on:
+      - backend
