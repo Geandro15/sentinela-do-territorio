@@ -1,0 +1,31 @@
+id,arquivo,texto_falado,avaliador,naturalidade,clareza
+01,resposta_01.mp3,"Ao ver fogo no mato, afaste-se e ligue um nove três. Não tente apagar sozinho.",Geandro,5,5
+01,resposta_01.mp3,"Ao ver fogo no mato, afaste-se e ligue um nove três. Não tente apagar sozinho.",Lucas,5,5
+01,resposta_01.mp3,"Ao ver fogo no mato, afaste-se e ligue um nove três. Não tente apagar sozinho.",Roberto,5,5
+02,resposta_02.mp3,A Defesa Civil atende pelo telefone um nove nove.,Geandro,5,5
+02,resposta_02.mp3,A Defesa Civil atende pelo telefone um nove nove.,Lucas,5,5
+02,resposta_02.mp3,A Defesa Civil atende pelo telefone um nove nove.,Roberto,5,5
+03,resposta_03.mp3,"Para receber alertas, envie um SMS com o cep da sua rua para quatro zero um nove nove. O cadastro é gratuito.",Geandro,5,5
+03,resposta_03.mp3,"Para receber alertas, envie um SMS com o cep da sua rua para quatro zero um nove nove. O cadastro é gratuito.",Lucas,5,5
+03,resposta_03.mp3,"Para receber alertas, envie um SMS com o cep da sua rua para quatro zero um nove nove. O cadastro é gratuito.",Roberto,5,5
+04,resposta_04.mp3,Feche portas e janelas e fique em um cômodo interno até a fumaça diminuir.,Geandro,5,5
+04,resposta_04.mp3,Feche portas e janelas e fique em um cômodo interno até a fumaça diminuir.,Lucas,5,5
+04,resposta_04.mp3,Feche portas e janelas e fique em um cômodo interno até a fumaça diminuir.,Roberto,5,5
+05,resposta_05.mp3,"Se ouvir estalos na parede, saia do imóvel e ligue um nove nove.",Geandro,5,5
+05,resposta_05.mp3,"Se ouvir estalos na parede, saia do imóvel e ligue um nove nove.",Lucas,5,5
+05,resposta_05.mp3,"Se ouvir estalos na parede, saia do imóvel e ligue um nove nove.",Roberto,5,5
+06,resposta_06.mp3,Não tenho essa informação. Procure a Defesa Civil ou a prefeitura da sua cidade.,Geandro,5,5
+06,resposta_06.mp3,Não tenho essa informação. Procure a Defesa Civil ou a prefeitura da sua cidade.,Lucas,5,5
+06,resposta_06.mp3,Não tenho essa informação. Procure a Defesa Civil ou a prefeitura da sua cidade.,Roberto,5,5
+07,resposta_07.mp3,"Eu só oriento sobre queimadas, alertas da Defesa Civil e riscos em construções.",Geandro,5,5
+07,resposta_07.mp3,"Eu só oriento sobre queimadas, alertas da Defesa Civil e riscos em construções.",Lucas,5,5
+07,resposta_07.mp3,"Eu só oriento sobre queimadas, alertas da Defesa Civil e riscos em construções.",Roberto,5,5
+08,resposta_08.mp3,"Informe o endereço, descreva o problema e, se puder, envie uma foto.",Geandro,5,5
+08,resposta_08.mp3,"Informe o endereço, descreva o problema e, se puder, envie uma foto.",Lucas,5,5
+08,resposta_08.mp3,"Informe o endereço, descreva o problema e, se puder, envie uma foto.",Roberto,5,5
+09,resposta_09.mp3,"Leve crianças, pessoas idosas e animais com você. Não volte para buscar objetos.",Geandro,5,5
+09,resposta_09.mp3,"Leve crianças, pessoas idosas e animais com você. Não volte para buscar objetos.",Lucas,5,5
+09,resposta_09.mp3,"Leve crianças, pessoas idosas e animais com você. Não volte para buscar objetos.",Roberto,5,5
+10,resposta_10.mp3,"Em dez de novembro de dois mil e vinte e seis, às catorze horas e trinta minutos, a equipe registrou mil e quinhentos chamados, doze por cento a mais que no mês anterior.",Geandro,5,5
+10,resposta_10.mp3,"Em dez de novembro de dois mil e vinte e seis, às catorze horas e trinta minutos, a equipe registrou mil e quinhentos chamados, doze por cento a mais que no mês anterior.",Lucas,5,5
+10,resposta_10.mp3,"Em dez de novembro de dois mil e vinte e seis, às catorze horas e trinta minutos, a equipe registrou mil e quinhentos chamados, doze por cento a mais que no mês anterior.",Roberto,5,5

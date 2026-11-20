@@ -1,0 +1,13 @@
+# Sentinela do Território, Global Solution CitizenTech
+# GEANDRO (RM 562316) | LUCAS VERO (RM 564202) | ROBERTO EDUARDO (RM 564537)
+
+pytesseract>=0.3.10
+Pillow>=10.0
+openpyxl>=3.1
+requests>=2.31
+pypdf>=4.0
+pytest>=8.0
+
+# O OCR também exige o programa Tesseract instalado no sistema (não é só
+# pip install): https://github.com/UB-Mannheim/tesseract/wiki (Windows) ou
+# apt-get install tesseract-ocr tesseract-ocr-por (Linux).
