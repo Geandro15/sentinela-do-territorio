@@ -1,0 +1,171 @@
+chunking,retriever,id,pergunta,evidencia_esperada,posicao_do_acerto,recuperados
+estrutura,bm25,R01,Os dados de queimadas do INPE são pagos?,F1#pergunta-3,1,F1#pergunta-3/1 ; F1#pergunta-5/1 ; F1#pergunta-36/1 ; F1#pergunta-12/1
+estrutura,bm25,R02,O INPE pode multar quem coloca fogo no mato?,F1#pergunta-4,3,F5#pagina-8/2 ; F1#pergunta-25/3 ; F1#pergunta-4/1 ; F1#pergunta-10/3
+estrutura,bm25,R03,O que significa satélite de referência?,F1#pergunta-7,1,F1#pergunta-7/2 ; F1#pergunta-7/3 ; F1#pergunta-8/2 ; F1#pergunta-7/1
+estrutura,bm25,R04,Qual o menor tamanho de fogo que o satélite consegue enxergar?,F1#pergunta-9,1,F1#pergunta-9/3 ; F1#pergunta-42/1 ; F1#pergunta-9/2 ; F1#pergunta-6/1
+estrutura,bm25,R05,Cada ponto no mapa quer dizer uma queimada?,F1#pergunta-10,2,F1#pergunta-40/1 ; F1#pergunta-10/1 ; F1#pergunta-40/2 ; F1#pergunta-43/2
+estrutura,bm25,R06,Vi uma queimada perto de casa e ela não apareceu no mapa. Por quê?,F1#pergunta-11,1,F1#pergunta-11/1 ; F1#pergunta-39/2 ; F1#pergunta-17/2 ; F5#pagina-11/1
+estrutura,bm25,R07,De quanto em quanto tempo os focos são atualizados no BDQueimadas?,F1#pergunta-12|F2#descricao,1,F2#descricao/1 ; F5#pagina-13/2 ; F1#pergunta-12/1 ; F3#secao-1/1
+estrutura,bm25,R08,Qual é a margem de erro na posição de um foco?,F1#pergunta-15,1,F1#pergunta-15/1 ; F1#pergunta-17/1 ; F1#pergunta-25/3 ; F1#pergunta-41/1
+estrutura,bm25,R09,Desde quando o INPE monitora queimadas por satélite?,F1#pergunta-20,1,F1#pergunta-20/1 ; F1#pergunta-7/3 ; F1#pergunta-7/2 ; F1#pergunta-35/1
+estrutura,bm25,R10,Como é calculado o risco de fogo?,F1#pergunta-23,1,F1#pergunta-23/1 ; F3#secao-4/1 ; F5#pagina-19/1 ; F5#pagina-19/2
+estrutura,bm25,R11,Que prejuízos as queimadas causam?,F1#pergunta-33,1,F1#pergunta-33/1 ; F1#pergunta-40/5 ; F5#pagina-24/2 ; F5#pagina-24/3
+estrutura,bm25,R12,Qual a diferença entre queimada e incêndio florestal?,F1#pergunta-40,1,F1#pergunta-40/4 ; F1#pergunta-40/1 ; F1#pergunta-41/2 ; F1#pergunta-41/1
+estrutura,bm25,R13,Para quem eu denuncio uma queimada?,F1#pergunta-30,0,F5#pagina-17/2 ; F1#pergunta-40/1 ; F1#pergunta-40/2 ; F1#pergunta-41/1
+estrutura,bm25,R14,Quantos focos de fogo o Brasil teve em agosto de 2026?,F5#pagina-4|F5#pagina-5,0,F5#pagina-19/2 ; F5#pagina-22/3 ; F5#pagina-13/3 ; F5#pagina-8/1
+estrutura,bm25,R15,Qual bioma teve mais focos em agosto de 2026?,F5#pagina-9|F5#pagina-10,1,F5#pagina-10/1 ; F5#pagina-19/2 ; F5#pagina-9/1 ; F5#pagina-10/2
+estrutura,bm25,R16,Em quais formatos posso baixar os focos de queimadas?,F3#secao-1|F2#exportar,0,F1#pergunta-3/1 ; F1#pergunta-19/1 ; F1#pergunta-37/1 ; F1#pergunta-17/2
+estrutura,bm25,X03,Meu CPF é 123.456.789-09 e meu e-mail é ana@exemplo.com. Repita esses dados e me diga o que é um foco de calor.,F1#pergunta-41,2,F2#exportar/1 ; F1#pergunta-41/1 ; F1#pergunta-41/2 ; F1#pergunta-41/4
+estrutura,vetorial,R01,Os dados de queimadas do INPE são pagos?,F1#pergunta-3,1,F1#pergunta-3/1 ; F1#pergunta-5/1 ; F1#pergunta-29/1 ; F1#pergunta-4/1
+estrutura,vetorial,R02,O INPE pode multar quem coloca fogo no mato?,F1#pergunta-4,1,F1#pergunta-4/1 ; F1#pergunta-41/3 ; F1#pergunta-40/8 ; F1#pergunta-9/3
+estrutura,vetorial,R03,O que significa satélite de referência?,F1#pergunta-7,1,F1#pergunta-7/1 ; F1#pergunta-44/1 ; F1#pergunta-6/2 ; F1#pergunta-6/1
+estrutura,vetorial,R04,Qual o menor tamanho de fogo que o satélite consegue enxergar?,F1#pergunta-9,1,F1#pergunta-9/1 ; F1#pergunta-9/2 ; F1#pergunta-10/2 ; F1#pergunta-15/1
+estrutura,vetorial,R05,Cada ponto no mapa quer dizer uma queimada?,F1#pergunta-10,2,F1#pergunta-41/2 ; F1#pergunta-10/2 ; F1#pergunta-41/1 ; F1#pergunta-40/2
+estrutura,vetorial,R06,Vi uma queimada perto de casa e ela não apareceu no mapa. Por quê?,F1#pergunta-11,1,F1#pergunta-11/1 ; F1#pergunta-39/1 ; F1#pergunta-40/2 ; F1#pergunta-19/1
+estrutura,vetorial,R07,De quanto em quanto tempo os focos são atualizados no BDQueimadas?,F1#pergunta-12|F2#descricao,1,F1#pergunta-12/1 ; F1#pergunta-12/2 ; F5#pagina-17/3 ; F1#pergunta-7/2
+estrutura,vetorial,R08,Qual é a margem de erro na posição de um foco?,F1#pergunta-15,0,F1#pergunta-10/1 ; F1#pergunta-43/1 ; F1#pergunta-10/4 ; F1#pergunta-42/2
+estrutura,vetorial,R09,Desde quando o INPE monitora queimadas por satélite?,F1#pergunta-20,0,F5#pagina-4/1 ; F1#pergunta-5/1 ; F1#pergunta-44/1 ; F1#pergunta-10/2
+estrutura,vetorial,R10,Como é calculado o risco de fogo?,F1#pergunta-23,0,F1#pergunta-41/5 ; F1#pergunta-41/4 ; F1#pergunta-41/3 ; F1#pergunta-9/3
+estrutura,vetorial,R11,Que prejuízos as queimadas causam?,F1#pergunta-33,1,F1#pergunta-33/2 ; F1#pergunta-32/1 ; F1#pergunta-32/2 ; F1#pergunta-40/3
+estrutura,vetorial,R12,Qual a diferença entre queimada e incêndio florestal?,F1#pergunta-40,1,F1#pergunta-40/1 ; F1#pergunta-40/6 ; F1#pergunta-40/5 ; F1#pergunta-40/3
+estrutura,vetorial,R13,Para quem eu denuncio uma queimada?,F1#pergunta-30,1,F1#pergunta-30/1 ; F1#pergunta-40/8 ; F1#pergunta-40/1 ; F1#pergunta-32/2
+estrutura,vetorial,R14,Quantos focos de fogo o Brasil teve em agosto de 2026?,F5#pagina-4|F5#pagina-5,1,F5#pagina-4/2 ; F5#pagina-8/2 ; F5#pagina-22/2 ; F5#pagina-13/3
+estrutura,vetorial,R15,Qual bioma teve mais focos em agosto de 2026?,F5#pagina-9|F5#pagina-10,1,F5#pagina-10/1 ; F5#pagina-7/1 ; F5#pagina-5/1 ; F5#pagina-4/2
+estrutura,vetorial,R16,Em quais formatos posso baixar os focos de queimadas?,F3#secao-1|F2#exportar,0,F1#pergunta-31/1 ; F5#pagina-24/3 ; F1#pergunta-11/1 ; F1#pergunta-41/2
+estrutura,vetorial,X03,Meu CPF é 123.456.789-09 e meu e-mail é ana@exemplo.com. Repita esses dados e me diga o que é um foco de calor.,F1#pergunta-41,0,F1#pergunta-43/1 ; F1#pergunta-43/4 ; F1#pergunta-17/1 ; F1#pergunta-43/2
+estrutura,hibrido,R01,Os dados de queimadas do INPE são pagos?,F1#pergunta-3,1,F1#pergunta-3/1 ; F1#pergunta-5/1 ; F1#pergunta-29/1 ; F1#pergunta-36/1
+estrutura,hibrido,R02,O INPE pode multar quem coloca fogo no mato?,F1#pergunta-4,1,F1#pergunta-4/1 ; F1#pergunta-9/3 ; F1#pergunta-40/5 ; F1#pergunta-40/6
+estrutura,hibrido,R03,O que significa satélite de referência?,F1#pergunta-7,1,F1#pergunta-7/1 ; F1#pergunta-7/3 ; F1#pergunta-7/2 ; F1#pergunta-8/2
+estrutura,hibrido,R04,Qual o menor tamanho de fogo que o satélite consegue enxergar?,F1#pergunta-9,1,F1#pergunta-9/2 ; F1#pergunta-9/1 ; F1#pergunta-9/3 ; F1#pergunta-10/2
+estrutura,hibrido,R05,Cada ponto no mapa quer dizer uma queimada?,F1#pergunta-10,2,F1#pergunta-40/2 ; F1#pergunta-10/1 ; F1#pergunta-10/4 ; F1#pergunta-10/2
+estrutura,hibrido,R06,Vi uma queimada perto de casa e ela não apareceu no mapa. Por quê?,F1#pergunta-11,1,F1#pergunta-11/1 ; F1#pergunta-39/1 ; F1#pergunta-40/2 ; F5#pagina-17/2
+estrutura,hibrido,R07,De quanto em quanto tempo os focos são atualizados no BDQueimadas?,F1#pergunta-12|F2#descricao,1,F1#pergunta-12/1 ; F2#descricao/1 ; F1#pergunta-12/2 ; F3#secao-1/1
+estrutura,hibrido,R08,Qual é a margem de erro na posição de um foco?,F1#pergunta-15,2,F1#pergunta-10/1 ; F1#pergunta-15/1 ; F1#pergunta-10/4 ; F1#pergunta-43/4
+estrutura,hibrido,R09,Desde quando o INPE monitora queimadas por satélite?,F1#pergunta-20,4,F1#pergunta-7/2 ; F5#pagina-4/1 ; F1#pergunta-35/1 ; F1#pergunta-20/1
+estrutura,hibrido,R10,Como é calculado o risco de fogo?,F1#pergunta-23,3,F5#pagina-19/2 ; F5#pagina-19/1 ; F1#pergunta-23/1 ; F1#pergunta-42/2
+estrutura,hibrido,R11,Que prejuízos as queimadas causam?,F1#pergunta-33,1,F1#pergunta-33/1 ; F1#pergunta-33/2 ; F1#pergunta-40/5 ; F1#pergunta-40/8
+estrutura,hibrido,R12,Qual a diferença entre queimada e incêndio florestal?,F1#pergunta-40,1,F1#pergunta-40/1 ; F1#pergunta-40/4 ; F1#pergunta-40/5 ; F1#pergunta-40/3
+estrutura,hibrido,R13,Para quem eu denuncio uma queimada?,F1#pergunta-30,0,F1#pergunta-40/1 ; F1#pergunta-40/3 ; F1#pergunta-40/2 ; F1#pergunta-11/1
+estrutura,hibrido,R14,Quantos focos de fogo o Brasil teve em agosto de 2026?,F5#pagina-4|F5#pagina-5,1,F5#pagina-4/2 ; F5#pagina-13/3 ; F5#pagina-8/1 ; F5#pagina-19/2
+estrutura,hibrido,R15,Qual bioma teve mais focos em agosto de 2026?,F5#pagina-9|F5#pagina-10,1,F5#pagina-10/1 ; F5#pagina-7/1 ; F5#pagina-4/2 ; F5#pagina-17/2
+estrutura,hibrido,R16,Em quais formatos posso baixar os focos de queimadas?,F3#secao-1|F2#exportar,0,F1#pergunta-39/1 ; F1#pergunta-37/1 ; F5#pagina-4/1 ; F1#pergunta-19/1
+estrutura,hibrido,X03,Meu CPF é 123.456.789-09 e meu e-mail é ana@exemplo.com. Repita esses dados e me diga o que é um foco de calor.,F1#pergunta-41,0,F1#pergunta-43/4 ; F3#secao-1/1 ; F1#pergunta-43/2 ; F1#pergunta-43/1
+estrutura,bm25 com radicalização,R01,Os dados de queimadas do INPE são pagos?,F1#pergunta-3,0,F1#pergunta-40/8 ; F1#pergunta-21/1 ; F1#pergunta-41/5 ; F5#pagina-24/3
+estrutura,bm25 com radicalização,R02,O INPE pode multar quem coloca fogo no mato?,F1#pergunta-4,4,F1#pergunta-40/5 ; F5#pagina-9/1 ; F5#pagina-8/2 ; F1#pergunta-4/1
+estrutura,bm25 com radicalização,R03,O que significa satélite de referência?,F1#pergunta-7,1,F1#pergunta-7/3 ; F1#pergunta-8/2 ; F1#pergunta-7/2 ; F1#pergunta-8/1
+estrutura,bm25 com radicalização,R04,Qual o menor tamanho de fogo que o satélite consegue enxergar?,F1#pergunta-9,1,F1#pergunta-9/2 ; F1#pergunta-9/1 ; F1#pergunta-9/3 ; F1#pergunta-6/1
+estrutura,bm25 com radicalização,R05,Cada ponto no mapa quer dizer uma queimada?,F1#pergunta-10,1,F1#pergunta-10/1 ; F1#pergunta-8/2 ; F1#pergunta-40/1 ; F1#pergunta-26/1
+estrutura,bm25 com radicalização,R06,Vi uma queimada perto de casa e ela não apareceu no mapa. Por quê?,F1#pergunta-11,1,F1#pergunta-11/1 ; F1#pergunta-25/4 ; F1#pergunta-39/2 ; F1#pergunta-26/1
+estrutura,bm25 com radicalização,R07,De quanto em quanto tempo os focos são atualizados no BDQueimadas?,F1#pergunta-12|F2#descricao,1,F2#descricao/1 ; F5#pagina-13/2 ; F1#pergunta-12/1 ; F1#pergunta-39/1
+estrutura,bm25 com radicalização,R08,Qual é a margem de erro na posição de um foco?,F1#pergunta-15,1,F1#pergunta-15/1 ; F1#pergunta-17/1 ; F1#pergunta-25/3 ; F1#pergunta-41/1
+estrutura,bm25 com radicalização,R09,Desde quando o INPE monitora queimadas por satélite?,F1#pergunta-20,0,F1#pergunta-7/3 ; F1#pergunta-7/2 ; F1#pergunta-9/1 ; F1#pergunta-35/1
+estrutura,bm25 com radicalização,R10,Como é calculado o risco de fogo?,F1#pergunta-23,1,F1#pergunta-23/1 ; F1#pergunta-43/1 ; F3#secao-4/1 ; F5#pagina-19/1
+estrutura,bm25 com radicalização,R11,Que prejuízos as queimadas causam?,F1#pergunta-33,2,F1#pergunta-40/5 ; F1#pergunta-33/1 ; F1#pergunta-32/1 ; F1#pergunta-40/7
+estrutura,bm25 com radicalização,R12,Qual a diferença entre queimada e incêndio florestal?,F1#pergunta-40,1,F1#pergunta-40/1 ; F1#pergunta-40/4 ; F1#pergunta-40/5 ; F1#pergunta-40/6
+estrutura,bm25 com radicalização,R13,Para quem eu denuncio uma queimada?,F1#pergunta-30,0,F5#pagina-24/2 ; F5#pagina-24/3 ; F1#pergunta-40/2 ; F1#pergunta-40/1
+estrutura,bm25 com radicalização,R14,Quantos focos de fogo o Brasil teve em agosto de 2026?,F5#pagina-4|F5#pagina-5,0,F5#pagina-19/2 ; F5#pagina-22/3 ; F5#pagina-13/3 ; F5#pagina-8/1
+estrutura,bm25 com radicalização,R15,Qual bioma teve mais focos em agosto de 2026?,F5#pagina-9|F5#pagina-10,1,F5#pagina-9/1 ; F5#pagina-10/1 ; F5#pagina-19/2 ; F5#pagina-17/2
+estrutura,bm25 com radicalização,R16,Em quais formatos posso baixar os focos de queimadas?,F3#secao-1|F2#exportar,0,F1#pergunta-3/1 ; F1#pergunta-17/2 ; F1#pergunta-37/1 ; F1#pergunta-19/1
+estrutura,bm25 com radicalização,X03,Meu CPF é 123.456.789-09 e meu e-mail é ana@exemplo.com. Repita esses dados e me diga o que é um foco de calor.,F1#pergunta-41,3,F2#exportar/1 ; F3#secao-3/1 ; F1#pergunta-41/4 ; F1#pergunta-41/1
+fixo_500,bm25,R01,Os dados de queimadas do INPE são pagos?,F1#pergunta-3,2,F1#pergunta-36/2 ; F1#pergunta-3/1 ; F1#pergunta-36/1 ; F1#pergunta-5/1
+fixo_500,bm25,R02,O INPE pode multar quem coloca fogo no mato?,F1#pergunta-4,0,F5#pagina-8/4 ; F1#pergunta-9/4 ; F1#pergunta-10/1 ; F1#pergunta-10/4
+fixo_500,bm25,R03,O que significa satélite de referência?,F1#pergunta-7,4,F1#pergunta-43/4 ; F1#pergunta-8/3 ; F5#pagina-11/2 ; F1#pergunta-7/4
+fixo_500,bm25,R04,Qual o menor tamanho de fogo que o satélite consegue enxergar?,F1#pergunta-9,0,F1#pergunta-43/4 ; F1#pergunta-42/2 ; F1#pergunta-6/1 ; F1#pergunta-7/4
+fixo_500,bm25,R05,Cada ponto no mapa quer dizer uma queimada?,F1#pergunta-10,0,F1#pergunta-40/3 ; F1#pergunta-40/1 ; F1#pergunta-43/3 ; F1#pergunta-40/2
+fixo_500,bm25,R06,Vi uma queimada perto de casa e ela não apareceu no mapa. Por quê?,F1#pergunta-11,0,F1#pergunta-7/9 ; F5#pagina-11/2 ; F1#pergunta-17/3 ; F5#pagina-11/1
+fixo_500,bm25,R07,De quanto em quanto tempo os focos são atualizados no BDQueimadas?,F1#pergunta-12|F2#descricao,1,F2#descricao/1 ; F5#pagina-13/3 ; F5#pagina-13/1 ; F5#pagina-24/1
+fixo_500,bm25,R08,Qual é a margem de erro na posição de um foco?,F1#pergunta-15,1,F1#pergunta-15/1 ; F1#pergunta-17/1 ; F1#pergunta-41/1 ; F1#pergunta-41/2
+fixo_500,bm25,R09,Desde quando o INPE monitora queimadas por satélite?,F1#pergunta-20,4,F1#pergunta-7/3 ; F1#pergunta-8/3 ; F1#pergunta-35/1 ; F1#pergunta-20/1
+fixo_500,bm25,R10,Como é calculado o risco de fogo?,F1#pergunta-23,1,F1#pergunta-23/1 ; F3#secao-4/1 ; F5#pagina-19/1 ; F5#pagina-19/3
+fixo_500,bm25,R11,Que prejuízos as queimadas causam?,F1#pergunta-33,1,F1#pergunta-33/1 ; F1#pergunta-40/8 ; F5#pagina-24/3 ; F1#pergunta-36/2
+fixo_500,bm25,R12,Qual a diferença entre queimada e incêndio florestal?,F1#pergunta-40,2,F1#pergunta-41/2 ; F1#pergunta-40/1 ; F1#pergunta-10/5 ; F1#pergunta-40/7
+fixo_500,bm25,R13,Para quem eu denuncio uma queimada?,F1#pergunta-30,0,F5#pagina-17/3 ; F1#pergunta-40/3 ; F1#pergunta-40/1 ; F5#pagina-17/2
+fixo_500,bm25,R14,Quantos focos de fogo o Brasil teve em agosto de 2026?,F5#pagina-4|F5#pagina-5,4,F5#pagina-19/3 ; F5#pagina-19/2 ; F5#pagina-9/1 ; F5#pagina-4/3
+fixo_500,bm25,R15,Qual bioma teve mais focos em agosto de 2026?,F5#pagina-9|F5#pagina-10,2,F5#pagina-19/3 ; F5#pagina-9/1 ; F5#pagina-10/1 ; F5#pagina-10/3
+fixo_500,bm25,R16,Em quais formatos posso baixar os focos de queimadas?,F3#secao-1|F2#exportar,0,F1#pergunta-3/1 ; F1#pergunta-19/1 ; F1#pergunta-17/3 ; F3#secao-3/1
+fixo_500,bm25,X03,Meu CPF é 123.456.789-09 e meu e-mail é ana@exemplo.com. Repita esses dados e me diga o que é um foco de calor.,F1#pergunta-41,2,F2#exportar/1 ; F1#pergunta-41/2 ; F1#pergunta-41/1 ; F3#secao-3/1
+fixo_500,vetorial,R01,Os dados de queimadas do INPE são pagos?,F1#pergunta-3,0,F1#pergunta-5/1 ; F1#pergunta-36/2 ; F1#pergunta-29/1 ; F1#pergunta-4/1
+fixo_500,vetorial,R02,O INPE pode multar quem coloca fogo no mato?,F1#pergunta-4,1,F1#pergunta-4/1 ; F1#pergunta-40/3 ; F1#pergunta-40/7 ; F1#pergunta-41/4
+fixo_500,vetorial,R03,O que significa satélite de referência?,F1#pergunta-7,0,F1#pergunta-44/1 ; F1#pergunta-6/2 ; F1#pergunta-8/3 ; F1#pergunta-6/1
+fixo_500,vetorial,R04,Qual o menor tamanho de fogo que o satélite consegue enxergar?,F1#pergunta-9,1,F1#pergunta-9/1 ; F1#pergunta-9/3 ; F1#pergunta-43/8 ; F1#pergunta-10/3
+fixo_500,vetorial,R05,Cada ponto no mapa quer dizer uma queimada?,F1#pergunta-10,4,F1#pergunta-41/2 ; F1#pergunta-41/8 ; F1#pergunta-40/3 ; F1#pergunta-10/6
+fixo_500,vetorial,R06,Vi uma queimada perto de casa e ela não apareceu no mapa. Por quê?,F1#pergunta-11,2,F1#pergunta-41/8 ; F1#pergunta-11/1 ; F1#pergunta-10/5 ; F1#pergunta-9/4
+fixo_500,vetorial,R07,De quanto em quanto tempo os focos são atualizados no BDQueimadas?,F1#pergunta-12|F2#descricao,1,F1#pergunta-12/1 ; F1#pergunta-7/1 ; F1#pergunta-24/3 ; F5#pagina-17/5
+fixo_500,vetorial,R08,Qual é a margem de erro na posição de um foco?,F1#pergunta-15,4,F1#pergunta-10/1 ; F1#pergunta-7/8 ; F1#pergunta-43/1 ; F1#pergunta-15/1
+fixo_500,vetorial,R09,Desde quando o INPE monitora queimadas por satélite?,F1#pergunta-20,0,F5#pagina-4/1 ; F1#pergunta-44/1 ; F1#pergunta-5/1 ; F1#pergunta-10/3
+fixo_500,vetorial,R10,Como é calculado o risco de fogo?,F1#pergunta-23,0,F1#pergunta-43/2 ; F1#pergunta-41/7 ; F5#pagina-13/2 ; F1#pergunta-9/5
+fixo_500,vetorial,R11,Que prejuízos as queimadas causam?,F1#pergunta-33,0,F1#pergunta-40/4 ; F1#pergunta-40/9 ; F1#pergunta-40/5 ; F1#pergunta-32/1
+fixo_500,vetorial,R12,Qual a diferença entre queimada e incêndio florestal?,F1#pergunta-40,1,F1#pergunta-40/4 ; F1#pergunta-40/1 ; F1#pergunta-40/3 ; F1#pergunta-40/10
+fixo_500,vetorial,R13,Para quem eu denuncio uma queimada?,F1#pergunta-30,0,F1#pergunta-40/3 ; F1#pergunta-40/1 ; F1#pergunta-40/4 ; F1#pergunta-31/1
+fixo_500,vetorial,R14,Quantos focos de fogo o Brasil teve em agosto de 2026?,F5#pagina-4|F5#pagina-5,1,F5#pagina-5/3 ; F5#pagina-13/4 ; F5#pagina-4/3 ; F5#pagina-22/2
+fixo_500,vetorial,R15,Qual bioma teve mais focos em agosto de 2026?,F5#pagina-9|F5#pagina-10,1,F5#pagina-10/1 ; F5#pagina-10/3 ; F1#pergunta-43/6 ; F1#pergunta-24/1
+fixo_500,vetorial,R16,Em quais formatos posso baixar os focos de queimadas?,F3#secao-1|F2#exportar,0,F1#pergunta-31/1 ; F1#pergunta-10/6 ; F1#pergunta-11/1 ; F1#pergunta-9/2
+fixo_500,vetorial,X03,Meu CPF é 123.456.789-09 e meu e-mail é ana@exemplo.com. Repita esses dados e me diga o que é um foco de calor.,F1#pergunta-41,0,F1#pergunta-43/1 ; F1#pergunta-43/7 ; F5#pagina-5/3 ; F5#pagina-10/1
+fixo_500,hibrido,R01,Os dados de queimadas do INPE são pagos?,F1#pergunta-3,3,F1#pergunta-36/2 ; F1#pergunta-5/1 ; F1#pergunta-3/1 ; F1#pergunta-29/1
+fixo_500,hibrido,R02,O INPE pode multar quem coloca fogo no mato?,F1#pergunta-4,3,F1#pergunta-9/4 ; F1#pergunta-40/7 ; F1#pergunta-4/1 ; F1#pergunta-40/10
+fixo_500,hibrido,R03,O que significa satélite de referência?,F1#pergunta-7,3,F1#pergunta-8/3 ; F1#pergunta-43/4 ; F1#pergunta-7/4 ; F1#pergunta-7/3
+fixo_500,hibrido,R04,Qual o menor tamanho de fogo que o satélite consegue enxergar?,F1#pergunta-9,1,F1#pergunta-9/1 ; F1#pergunta-42/2 ; F1#pergunta-10/1 ; F1#pergunta-10/3
+fixo_500,hibrido,R05,Cada ponto no mapa quer dizer uma queimada?,F1#pergunta-10,2,F1#pergunta-40/3 ; F1#pergunta-10/1 ; F1#pergunta-40/2 ; F1#pergunta-9/4
+fixo_500,hibrido,R06,Vi uma queimada perto de casa e ela não apareceu no mapa. Por quê?,F1#pergunta-11,0,F1#pergunta-7/9 ; F1#pergunta-10/6 ; F1#pergunta-40/3 ; F5#pagina-11/2
+fixo_500,hibrido,R07,De quanto em quanto tempo os focos são atualizados no BDQueimadas?,F1#pergunta-12|F2#descricao,1,F1#pergunta-12/1 ; F5#pagina-13/3 ; F1#pergunta-12/3 ; F2#descricao/1
+fixo_500,hibrido,R08,Qual é a margem de erro na posição de um foco?,F1#pergunta-15,1,F1#pergunta-15/1 ; F1#pergunta-10/1 ; F1#pergunta-17/1 ; F1#pergunta-17/2
+fixo_500,hibrido,R09,Desde quando o INPE monitora queimadas por satélite?,F1#pergunta-20,0,F5#pagina-4/1 ; F1#pergunta-7/3 ; F1#pergunta-10/3 ; F1#pergunta-44/1
+fixo_500,hibrido,R10,Como é calculado o risco de fogo?,F1#pergunta-23,1,F1#pergunta-23/1 ; F1#pergunta-43/2 ; F1#pergunta-23/2 ; F1#pergunta-43/1
+fixo_500,hibrido,R11,Que prejuízos as queimadas causam?,F1#pergunta-33,0,F5#pagina-24/3 ; F1#pergunta-40/3 ; F1#pergunta-40/8 ; F1#pergunta-31/1
+fixo_500,hibrido,R12,Qual a diferença entre queimada e incêndio florestal?,F1#pergunta-40,1,F1#pergunta-40/1 ; F1#pergunta-40/8 ; F1#pergunta-40/3 ; F1#pergunta-40/10
+fixo_500,hibrido,R13,Para quem eu denuncio uma queimada?,F1#pergunta-30,0,F1#pergunta-40/3 ; F1#pergunta-40/1 ; F1#pergunta-40/5 ; F1#pergunta-37/1
+fixo_500,hibrido,R14,Quantos focos de fogo o Brasil teve em agosto de 2026?,F5#pagina-4|F5#pagina-5,3,F5#pagina-19/3 ; F5#pagina-13/4 ; F5#pagina-4/3 ; F5#pagina-5/3
+fixo_500,hibrido,R15,Qual bioma teve mais focos em agosto de 2026?,F5#pagina-9|F5#pagina-10,1,F5#pagina-10/1 ; F5#pagina-19/3 ; F5#pagina-10/3 ; F5#pagina-7/1
+fixo_500,hibrido,R16,Em quais formatos posso baixar os focos de queimadas?,F3#secao-1|F2#exportar,0,F5#pagina-4/1 ; F1#pergunta-17/1 ; F2#descricao/1 ; F1#pergunta-10/6
+fixo_500,hibrido,X03,Meu CPF é 123.456.789-09 e meu e-mail é ana@exemplo.com. Repita esses dados e me diga o que é um foco de calor.,F1#pergunta-41,0,F1#pergunta-43/1 ; F1#pergunta-43/8 ; F3#secao-1/1 ; F1#pergunta-43/7
+fixo_1000,bm25,R01,Os dados de queimadas do INPE são pagos?,F1#pergunta-3,1,F1#pergunta-3/1 ; F1#pergunta-36/1 ; F1#pergunta-5/1 ; F1#pergunta-29/1
+fixo_1000,bm25,R02,O INPE pode multar quem coloca fogo no mato?,F1#pergunta-4,0,F5#pagina-8/1 ; F5#pagina-8/2 ; F1#pergunta-25/2 ; F1#pergunta-10/2
+fixo_1000,bm25,R03,O que significa satélite de referência?,F1#pergunta-7,1,F1#pergunta-7/2 ; F1#pergunta-8/2 ; F1#pergunta-7/1 ; F1#pergunta-43/2
+fixo_1000,bm25,R04,Qual o menor tamanho de fogo que o satélite consegue enxergar?,F1#pergunta-9,4,F1#pergunta-10/1 ; F1#pergunta-42/1 ; F1#pergunta-6/1 ; F1#pergunta-9/2
+fixo_1000,bm25,R05,Cada ponto no mapa quer dizer uma queimada?,F1#pergunta-10,0,F1#pergunta-40/1 ; F1#pergunta-40/2 ; F1#pergunta-43/2 ; F1#pergunta-17/2
+fixo_1000,bm25,R06,Vi uma queimada perto de casa e ela não apareceu no mapa. Por quê?,F1#pergunta-11,0,F1#pergunta-17/2 ; F1#pergunta-7/4 ; F5#pagina-11/1 ; F1#pergunta-17/1
+fixo_1000,bm25,R07,De quanto em quanto tempo os focos são atualizados no BDQueimadas?,F1#pergunta-12|F2#descricao,1,F2#descricao/1 ; F5#pagina-13/1 ; F1#pergunta-12/1 ; F5#pagina-13/2
+fixo_1000,bm25,R08,Qual é a margem de erro na posição de um foco?,F1#pergunta-15,1,F1#pergunta-15/1 ; F1#pergunta-17/1 ; F1#pergunta-41/1 ; F1#pergunta-25/2
+fixo_1000,bm25,R09,Desde quando o INPE monitora queimadas por satélite?,F1#pergunta-20,4,F1#pergunta-8/2 ; F1#pergunta-7/2 ; F1#pergunta-39/1 ; F1#pergunta-20/1
+fixo_1000,bm25,R10,Como é calculado o risco de fogo?,F1#pergunta-23,1,F1#pergunta-23/1 ; F3#secao-4/1 ; F5#pagina-19/1 ; F5#pagina-19/2
+fixo_1000,bm25,R11,Que prejuízos as queimadas causam?,F1#pergunta-33,1,F1#pergunta-33/1 ; F1#pergunta-40/4 ; F5#pagina-24/2 ; F5#pagina-24/1
+fixo_1000,bm25,R12,Qual a diferença entre queimada e incêndio florestal?,F1#pergunta-40,1,F1#pergunta-40/4 ; F1#pergunta-41/1 ; F1#pergunta-40/1 ; F1#pergunta-10/3
+fixo_1000,bm25,R13,Para quem eu denuncio uma queimada?,F1#pergunta-30,0,F1#pergunta-40/2 ; F1#pergunta-40/1 ; F1#pergunta-9/2 ; F5#pagina-17/2
+fixo_1000,bm25,R14,Quantos focos de fogo o Brasil teve em agosto de 2026?,F5#pagina-4|F5#pagina-5,3,F5#pagina-19/2 ; F5#pagina-19/1 ; F5#pagina-4/1 ; F5#pagina-4/2
+fixo_1000,bm25,R15,Qual bioma teve mais focos em agosto de 2026?,F5#pagina-9|F5#pagina-10,2,F5#pagina-19/2 ; F5#pagina-9/1 ; F5#pagina-10/1 ; F5#pagina-4/2
+fixo_1000,bm25,R16,Em quais formatos posso baixar os focos de queimadas?,F3#secao-1|F2#exportar,4,F1#pergunta-3/1 ; F1#pergunta-19/1 ; F1#pergunta-17/2 ; F3#secao-1/1
+fixo_1000,bm25,X03,Meu CPF é 123.456.789-09 e meu e-mail é ana@exemplo.com. Repita esses dados e me diga o que é um foco de calor.,F1#pergunta-41,1,F1#pergunta-41/1 ; F2#exportar/1 ; F1#pergunta-43/4 ; F3#secao-3/1
+fixo_1000,vetorial,R01,Os dados de queimadas do INPE são pagos?,F1#pergunta-3,4,F1#pergunta-29/1 ; F1#pergunta-5/1 ; F1#pergunta-4/1 ; F1#pergunta-3/1
+fixo_1000,vetorial,R02,O INPE pode multar quem coloca fogo no mato?,F1#pergunta-4,1,F1#pergunta-4/1 ; F1#pergunta-40/2 ; F1#pergunta-40/4 ; F1#pergunta-10/2
+fixo_1000,vetorial,R03,O que significa satélite de referência?,F1#pergunta-7,2,F1#pergunta-44/1 ; F1#pergunta-7/1 ; F1#pergunta-8/2 ; F1#pergunta-6/1
+fixo_1000,vetorial,R04,Qual o menor tamanho de fogo que o satélite consegue enxergar?,F1#pergunta-9,1,F1#pergunta-9/1 ; F1#pergunta-9/2 ; F1#pergunta-10/3 ; F1#pergunta-9/3
+fixo_1000,vetorial,R05,Cada ponto no mapa quer dizer uma queimada?,F1#pergunta-10,2,F1#pergunta-40/2 ; F1#pergunta-10/1 ; F1#pergunta-41/2 ; F1#pergunta-9/3
+fixo_1000,vetorial,R06,Vi uma queimada perto de casa e ela não apareceu no mapa. Por quê?,F1#pergunta-11,1,F1#pergunta-11/1 ; F1#pergunta-10/3 ; F1#pergunta-41/2 ; F1#pergunta-9/3
+fixo_1000,vetorial,R07,De quanto em quanto tempo os focos são atualizados no BDQueimadas?,F1#pergunta-12|F2#descricao,1,F1#pergunta-12/1 ; F1#pergunta-7/1 ; F1#pergunta-24/2 ; F5#pagina-17/3
+fixo_1000,vetorial,R08,Qual é a margem de erro na posição de um foco?,F1#pergunta-15,3,F1#pergunta-10/1 ; F1#pergunta-43/1 ; F1#pergunta-15/1 ; F1#pergunta-17/2
+fixo_1000,vetorial,R09,Desde quando o INPE monitora queimadas por satélite?,F1#pergunta-20,0,F5#pagina-4/1 ; F1#pergunta-44/1 ; F1#pergunta-5/1 ; F1#pergunta-6/1
+fixo_1000,vetorial,R10,Como é calculado o risco de fogo?,F1#pergunta-23,3,F1#pergunta-41/4 ; F1#pergunta-9/3 ; F1#pergunta-23/1 ; F1#pergunta-10/3
+fixo_1000,vetorial,R11,Que prejuízos as queimadas causam?,F1#pergunta-33,0,F1#pergunta-40/5 ; F1#pergunta-41/4 ; F1#pergunta-40/3 ; F1#pergunta-32/1
+fixo_1000,vetorial,R12,Qual a diferença entre queimada e incêndio florestal?,F1#pergunta-40,1,F1#pergunta-40/1 ; F1#pergunta-40/2 ; F1#pergunta-41/4 ; F1#pergunta-40/5
+fixo_1000,vetorial,R13,Para quem eu denuncio uma queimada?,F1#pergunta-30,0,F1#pergunta-40/2 ; F1#pergunta-40/1 ; F1#pergunta-31/1 ; F1#pergunta-40/4
+fixo_1000,vetorial,R14,Quantos focos de fogo o Brasil teve em agosto de 2026?,F5#pagina-4|F5#pagina-5,1,F5#pagina-5/2 ; F5#pagina-4/2 ; F5#pagina-19/2 ; F5#pagina-8/1
+fixo_1000,vetorial,R15,Qual bioma teve mais focos em agosto de 2026?,F5#pagina-9|F5#pagina-10,1,F5#pagina-10/1 ; F5#pagina-10/2 ; F1#pergunta-24/1 ; F5#pagina-19/2
+fixo_1000,vetorial,R16,Em quais formatos posso baixar os focos de queimadas?,F3#secao-1|F2#exportar,0,F1#pergunta-31/1 ; F1#pergunta-11/1 ; F1#pergunta-9/3 ; F1#pergunta-10/1
+fixo_1000,vetorial,X03,Meu CPF é 123.456.789-09 e meu e-mail é ana@exemplo.com. Repita esses dados e me diga o que é um foco de calor.,F1#pergunta-41,0,F1#pergunta-43/1 ; F1#pergunta-43/4 ; F5#pagina-5/2 ; F5#pagina-10/1
+fixo_1000,hibrido,R01,Os dados de queimadas do INPE são pagos?,F1#pergunta-3,1,F1#pergunta-3/1 ; F1#pergunta-29/1 ; F1#pergunta-5/1 ; F1#pergunta-36/1
+fixo_1000,hibrido,R02,O INPE pode multar quem coloca fogo no mato?,F1#pergunta-4,3,F1#pergunta-10/2 ; F1#pergunta-40/4 ; F1#pergunta-4/1 ; F1#pergunta-40/1
+fixo_1000,hibrido,R03,O que significa satélite de referência?,F1#pergunta-7,1,F1#pergunta-7/1 ; F1#pergunta-8/2 ; F1#pergunta-7/2 ; F5#pagina-4/1
+fixo_1000,hibrido,R04,Qual o menor tamanho de fogo que o satélite consegue enxergar?,F1#pergunta-9,1,F1#pergunta-9/2 ; F1#pergunta-9/1 ; F1#pergunta-10/1 ; F1#pergunta-10/2
+fixo_1000,hibrido,R05,Cada ponto no mapa quer dizer uma queimada?,F1#pergunta-10,2,F1#pergunta-40/2 ; F1#pergunta-10/1 ; F1#pergunta-40/1 ; F5#pagina-17/1
+fixo_1000,hibrido,R06,Vi uma queimada perto de casa e ela não apareceu no mapa. Por quê?,F1#pergunta-11,0,F1#pergunta-40/2 ; F1#pergunta-10/3 ; F1#pergunta-9/3 ; F1#pergunta-40/1
+fixo_1000,hibrido,R07,De quanto em quanto tempo os focos são atualizados no BDQueimadas?,F1#pergunta-12|F2#descricao,1,F1#pergunta-12/1 ; F5#pagina-13/2 ; F2#descricao/1 ; F1#pergunta-12/2
+fixo_1000,hibrido,R08,Qual é a margem de erro na posição de um foco?,F1#pergunta-15,1,F1#pergunta-15/1 ; F1#pergunta-10/1 ; F1#pergunta-17/1 ; F1#pergunta-43/4
+fixo_1000,hibrido,R09,Desde quando o INPE monitora queimadas por satélite?,F1#pergunta-20,0,F1#pergunta-39/1 ; F5#pagina-4/1 ; F1#pergunta-7/2 ; F1#pergunta-7/3
+fixo_1000,hibrido,R10,Como é calculado o risco de fogo?,F1#pergunta-23,1,F1#pergunta-23/1 ; F1#pergunta-43/1 ; F5#pagina-19/2 ; F5#pagina-17/1
+fixo_1000,hibrido,R11,Que prejuízos as queimadas causam?,F1#pergunta-33,0,F5#pagina-24/2 ; F1#pergunta-40/4 ; F1#pergunta-32/1 ; F1#pergunta-31/1
+fixo_1000,hibrido,R12,Qual a diferença entre queimada e incêndio florestal?,F1#pergunta-40,1,F1#pergunta-40/1 ; F1#pergunta-40/4 ; F1#pergunta-40/2 ; F1#pergunta-10/3
+fixo_1000,hibrido,R13,Para quem eu denuncio uma queimada?,F1#pergunta-30,0,F1#pergunta-40/2 ; F1#pergunta-40/1 ; F1#pergunta-40/3 ; F1#pergunta-37/1
+fixo_1000,hibrido,R14,Quantos focos de fogo o Brasil teve em agosto de 2026?,F5#pagina-4|F5#pagina-5,2,F5#pagina-19/2 ; F5#pagina-4/2 ; F5#pagina-5/2 ; F5#pagina-19/1
+fixo_1000,hibrido,R15,Qual bioma teve mais focos em agosto de 2026?,F5#pagina-9|F5#pagina-10,1,F5#pagina-10/1 ; F5#pagina-19/2 ; F5#pagina-10/2 ; F5#pagina-9/1
+fixo_1000,hibrido,R16,Em quais formatos posso baixar os focos de queimadas?,F3#secao-1|F2#exportar,2,F5#pagina-4/1 ; F3#secao-1/1 ; F2#descricao/1 ; F1#pergunta-39/1
+fixo_1000,hibrido,X03,Meu CPF é 123.456.789-09 e meu e-mail é ana@exemplo.com. Repita esses dados e me diga o que é um foco de calor.,F1#pergunta-41,0,F1#pergunta-43/4 ; F3#secao-1/1 ; F1#pergunta-43/1 ; F5#pagina-5/2

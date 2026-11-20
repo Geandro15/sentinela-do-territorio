@@ -1,0 +1,11 @@
+chunking,retriever,trechos,tamanho_medio,acerto@1,acerto@4,mrr
+estrutura,bm25,125,714,0.647,0.824,0.725
+estrutura,vetorial,125,714,0.647,0.706,0.676
+estrutura,hibrido,125,714,0.588,0.824,0.681
+estrutura,bm25 com radicalização,125,714,0.529,0.706,0.593
+fixo_500,bm25,198,437,0.235,0.647,0.397
+fixo_500,vetorial,198,437,0.353,0.529,0.412
+fixo_500,hibrido,198,437,0.353,0.647,0.461
+fixo_1000,bm25,117,711,0.471,0.765,0.564
+fixo_1000,vetorial,117,711,0.412,0.706,0.525
+fixo_1000,hibrido,117,711,0.471,0.706,0.578

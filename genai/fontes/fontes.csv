@@ -1,0 +1,6 @@
+id,titulo,orgao,url,data_consulta,arquivo,tipo
+F1,Perguntas Frequentes (FAQ) do Programa Queimadas,INPE - Programa Queimadas,https://data.inpe.br/queimadas/faq/,2026-11-16,faq.html,faq
+F2,BDQueimadas - Banco de Dados de Queimadas,INPE - Programa Queimadas,https://data.inpe.br/queimadas/bdqueimadas/,2026-11-16,bdqueimadas.html,pagina
+F3,Dados Abertos do Programa Queimadas,INPE - Programa Queimadas,https://data.inpe.br/queimadas/dados-abertos/,2026-11-16,dados_abertos.html,pagina
+F4,Boletim InfoQueima - apresentação,INPE - Programa Queimadas,https://data.inpe.br/queimadas/boletim-infoqueima/,2026-11-16,boletim_infoqueima.html,pagina
+F5,InfoQueima - boletim mensal de agosto de 2026,INPE - Programa Queimadas,https://dataserver-coids.inpe.br/queimadas/queimadas/Infoqueima/2026/2026_08_infoqueima.pdf,2026-11-16,infoqueima_2026_08.txt,pdf
