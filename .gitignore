@@ -1,0 +1,19 @@
+# Segredos e configurações locais
+.env
+
+# Ambiente Python instalado na máquina (cada um cria o seu com 1_INSTALAR.bat)
+.venv/
+venv/
+
+# Arquivos gerados automaticamente
+__pycache__/
+*.pyc
+.pytest_cache/
+logs/
+*.tmp
+
+# Entrega da disciplina de PLN, publicada em repositório separado:
+# https://github.com/Geandro15/sentinela-territorio-pln
+ENTREGA_PLN/
+
+# Áudios do cidadão nunca são versionados; os áudios de teste do grupo ficam em testes/audios/
