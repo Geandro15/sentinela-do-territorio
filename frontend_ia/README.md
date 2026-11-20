@@ -56,7 +56,7 @@ O front-end nunca chama o Ollama nem o modelo de visão diretamente: tudo passa 
 - **Nenhuma decisão é automática.** Toda resposta de imagem carrega o aviso "esta é uma sugestão automática, não uma decisão" (de `visao/inferencia/classificador.py`), e a tela exige confirmação humana antes de qualquer encaminhamento.
 - **Risco de alucinação:** o assistente de texto só responde com base em trechos citados das fontes do INPE, e a resposta é bloqueada se trouxer número fora do contexto ou citação inválida (ver seção 5.3 do relatório de Generative AI). Ainda assim, o teste de ponta a ponta mediu 4 respostas incorretas em 34 que passaram pela verificação sem serem bloqueadas (seção 6.4 do mesmo relatório), a verificação confere citação e número, não se o fato citado realmente responde à pergunta. Por isso as fontes são sempre mostradas junto da resposta, para o cidadão conferir.
 - **Risco de viés:** o classificador de imagem não foi testado com imagens de vegetação brasileira (ver `visao/docs/relatorio_visao.md`, seção 7).
-- **O que a solução não faz:** não substitui o BDQueimadas do INPE nem os canais oficiais de emergência (Bombeiros, Defesa Civil); não decide sozinha se uma equipe deve ser acionada; não guarda dados pessoais do cidadão (CPF, e-mail e telefone são mascarados antes de qualquer uso ou registro, ver `pln/corpus/limpeza.py`).
+- **O que a solução não faz:** não substitui o BDQueimadas do INPE nem os canais oficiais de emergência (Bombeiros, Defesa Civil); não decide sozinha se uma equipe deve ser acionada; não guarda dados pessoais do cidadão (CPF, e-mail e telefone são mascarados antes de qualquer uso ou registro, ver `corpus/limpeza.py`).
 
 ## 5. Evidências de validação
 
@@ -66,7 +66,7 @@ O front-end nunca chama o Ollama nem o modelo de visão diretamente: tudo passa 
 
 ### (b) Casos de teste da IA
 
-Estes três casos vêm de execuções reais do sistema (dois deles no teste completo do módulo de Generative AI, documentado em `pln/genai/docs/relatorio_genai.md`, seção 6.4; o terceiro foi encontrado rodando esta própria interface de ponta a ponta):
+Estes três casos vêm de execuções reais do sistema (dois deles no teste completo do módulo de Generative AI, documentado em `genai/docs/relatorio_genai.md`, seção 6.4; o terceiro foi encontrado rodando esta própria interface de ponta a ponta):
 
 | # | Entrada | Saída esperada | Saída obtida | Ajuste realizado |
 | --- | --- | --- | --- | --- |

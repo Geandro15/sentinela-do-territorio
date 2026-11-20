@@ -4,7 +4,7 @@
 """Pipeline do chat: liga a API ao assistente RAG do módulo de PLN/Generative AI.
 
 Mantém um único assistente carregado (o índice e os embeddings só são lidos
-uma vez), igual ao padrão já usado em ``pln/genai/aba.py``.
+uma vez), igual ao padrão já usado em ``genai/aba.py``.
 """
 from __future__ import annotations
 

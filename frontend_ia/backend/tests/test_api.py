@@ -45,7 +45,7 @@ def test_perguntar_sucesso(monkeypatch):
 
 
 def test_perguntar_nao_vaza_erro_tecnico_do_llm_no_texto(monkeypatch):
-    """O genai (pln/genai/assistente_rag.py) embute o erro técnico bruto no texto
+    """O genai (genai/assistente_rag.py) embute o erro técnico bruto no texto
     da resposta quando o LLM está fora do ar. A API tem que trocar esse texto
     antes de devolver ao cidadão, sem isso, 'erro técnico' vaza como se fosse
     a resposta do assistente (achado real, visto rodando a interface de ponta a

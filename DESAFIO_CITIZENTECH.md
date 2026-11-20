@@ -123,4 +123,4 @@ No conjunto, o resultado esperado é uma resposta mais rápida e confiável a qu
 - INPE, Programa Queimadas, Boletim InfoQueima de agosto de 2026: <https://dataserver-coids.inpe.br/queimadas/queimadas/Infoqueima/2026/2026_08_infoqueima.pdf>
 - O Liberal, "Focos de incêndio no Pará aumentam 142% em 2026, aponta Inpe": <https://www.oliberal.com/para/focos-de-incendio-no-para-aumentam-142-em-2026-aponta-inpe-1.1194643>
 - Brasil61, "Brasil registra quase 30 mil focos de incêndio em 2026": <https://brasil61.com/n/brasil-registra-quase-30-mil-focos-de-incendio-em-2026-aumento-de-temperatura-levanta-alerta-de-risco-para-amazonia-cerrado-e-caatinga-bras2616925>
-- Relatórios internos do projeto: `visao/docs/relatorio_visao.md`, `pln/genai/docs/relatorio_genai.md`, `rpa/docs/relatorio_rpa.md`, `cluster_computing/docs/relatorio_cluster.pdf`, `computacao_quantica/docs/relatorio_quantica.md`
+- Relatórios internos do projeto: `visao/docs/relatorio_visao.md`, `genai/docs/relatorio_genai.md`, `rpa/docs/relatorio_rpa.md`, `cluster_computing/docs/relatorio_cluster.pdf`, `computacao_quantica/docs/relatorio_quantica.md`
