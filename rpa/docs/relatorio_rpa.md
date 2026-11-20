@@ -75,6 +75,35 @@ REVISAR (relato 004, sem descrição) caiu exatamente em REVISAR, e nenhum
 dos dois casos de falha de propósito (satélite corrompido, campo ausente)
 travou o lote.
 
+**Resultado medido nesta amostra (5 relatos sintéticos, execução final):**
+
+| Medida | Resultado |
+|---|---|
+| Relatos processados sem travar o lote | 5 de 5 |
+| Campos do formulário encontrados pelo OCR | 14 de 14 (5 locais, 5 datas e 4 descrições; o relato 004 não tem descrição de propósito) |
+| Campos lidos sem nenhum erro de caractere | 13 de 14 (erro: "Munickpio" em vez de "Município" no relato 001) |
+| Campo ausente detectado e enviado para revisão humana | 1 de 1 (relato 004 → REVISAR) |
+| Prioridade igual à que a regra de `rpa/regras.py` prevê para os sinais de cada relato | 5 de 5 (4 MEDIA e 1 REVISAR) |
+| Falhas previsíveis tratadas com registro em log, sem interromper a execução | 4 (boletim do INPE fora do ar, relato sem imagem de satélite, imagem corrompida, campo ausente) |
+
+Limites desta medição, para não superestimar o resultado:
+
+- A amostra é pequena (5 relatos) e sintética. Ela confirma que o fluxo
+  funciona e que as falhas são tratadas, mas não mede o desempenho em
+  formulários reais, com letra de mão ou fotos tortas.
+- As imagens de satélite de teste são quadrados de uma cor só, gerados por
+  `rpa/gerar_dados_teste.py` apenas para exercitar esse trecho do fluxo.
+  Por isso o resultado do classificador nesta amostra não mede a qualidade
+  do modelo. O desempenho dele foi medido na disciplina de Visão
+  Computacional, com imagens reais (acurácia 0,967 e recall 0,961, ver
+  `visao/README.md`).
+- Nenhum relato chegou a ALTA nesta execução: sem o boletim do INPE e sem
+  alerta nas imagens de teste, cada relato somou no máximo 1 ponto. Um
+  relato como o 001 ("fogo na mata") ficaria ALTA se a imagem de satélite
+  real indicasse incêndio. O caminho de prioridade ALTA, com notificação ao
+  gestor, está coberto pelo teste automatizado
+  `test_regra_prioridade_alta_com_descricao_e_imagem_de_risco`.
+
 **Caso de falha tratado 1, boletim do INPE indisponível.** Nesta execução,
 os boletins de setembro e outubro de 2026 ainda não tinham sido publicados
 (404 do servidor do INPE para os dois meses tentados). O robô registrou o
@@ -88,17 +117,17 @@ extração funcionou corretamente e encontrou o número real do boletim
 (20.222 focos), confirmando que o scraping funciona quando o PDF existe, o que falhou nesta execução foi apenas a disponibilidade do boletim mais
 recente, tratada sem erro.
 
-**Caso de falha tratado 2, modelo de Visão Computacional indisponível
-neste ambiente.** As 3 imagens de satélite "boas" desta execução (dos
-relatos 001, 002 e 005) não puderam ser classificadas porque o arquivo
-`.keras` do modelo não está configurado nesta máquina de teste
+**Caso de falha tratado 2, modelo de Visão Computacional indisponível.**
+Na primeira execução, feita no ambiente de build, o arquivo `.keras` do
+modelo não estava disponível
 (`Modelo não encontrado em 'modelos/queimada_mobilenet_v2.keras'`). O robô
 registrou o aviso e seguiu, marcando a coluna "Imagem classificada" como
-"não enviada/indisponível" em vez de travar, exatamente o comportamento
-testado por `rpa/tests/test_robo.py`. Quando o módulo roda na máquina do
-grupo (onde o `.env` da Visão Computacional já aponta para o `.keras`
-treinado, ver `frontend_ia`), esse sinal passa a contar normalmente para a
-prioridade.
+"não enviada/indisponível" em vez de travar, o mesmo comportamento testado
+por `rpa/tests/test_robo.py`. Na execução final, na máquina do grupo, o
+modelo foi encontrado e classificou as duas imagens de satélite válidas
+(relatos 001 e 002, ambas "sem alerta", como mostra a tabela acima). O
+relato 003 não tem imagem de satélite, e a do relato 005 é o arquivo
+corrompido do caso 3.
 
 **Caso de falha tratado 3, imagem de satélite corrompida.** O arquivo
 `relato_005_imagem_corrompida_satelite.jpg` foi gerado de propósito como um
